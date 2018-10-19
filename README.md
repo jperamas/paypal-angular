@@ -6,8 +6,14 @@ Paypal Angular is a module to provide easy and fast integration with [PayPal Che
 ## Installing
 
 ```sh
-npm install paypal-angular --save-dev
+npm i paypal-angular
 ```
+or
+
+```sh
+yarn add paypal-angular
+```
+
 ## Init
 Make paypal-angular available throughout your app
 
