@@ -1,0 +1,25 @@
+{
+  "name": "paypal-angular",
+  "version": "0.0.1",
+  "description": "Angular to Paypal module containing useful providers, services, interface and components",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jperamas/paypal-angular.git"
+  },
+  "author": "Joan Peramas <joan.peramas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jperamas/paypal-angular/issues"
+  },
+  "homepage": "https://github.com/jperamas/paypal-angular",
+  "keywords": [
+    "checkout",
+    "angular",
+    "paypal",
+    "wrap"
+  ]
+}
