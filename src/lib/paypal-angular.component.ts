@@ -36,7 +36,7 @@ export class PaypalAngularComponent implements OnInit {
     commit: true,
     env: 'sandbox'
   };
-  idElement = '#paypal-container-element';
+  idElement = `#paypal-container-element-${Date.now()}`;
 
   constructor(
     private paypalAngularService: PaypalAngularService
@@ -77,10 +77,12 @@ export class PaypalAngularComponent implements OnInit {
     if (!document.getElementById(this.PAYPAL_SCRIPT)) {
       this.addPaypalScript().then(() => {
         this.paypalAngularService.setPaypalRef(paypal);
-        paypal.Button.render( this.paypalConfig, this.idElement);
+          paypal.Button.render(this.paypalConfig, this.idElement);
       });
-    } else if(paypal && document.querySelector(this.idElement)) {
-      paypal.Button.render( this.paypalConfig, this.idElement);
+    } else if (paypal) {
+      setTimeout(() => {
+        paypal.Button.render(this.paypalConfig, this.idElement);
+      }, 200);
     }
   }
 

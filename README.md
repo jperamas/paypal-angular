@@ -31,8 +31,14 @@ const paypalConfig: PaypalAppConfigModel = {
 }) export class AppModule {}
 ```
 
-> More informatión about checkout process
->> 1. check [Flow Playpal checkout](https://developer.paypal.com/docs/checkout/integrate/#2-set-up-a-payment)
+## More informatión about checkout process
+There are 2 ways of bringing paypal into your web app. 
+Client side express checkout using REST – [Click here.](https://developer.paypal.com/demo/checkout/#/pattern/client)
+Server side express checkout using REST – [Click here.](https://developer.paypal.com/demo/checkout/#/pattern/server)
+I would highly recommend you to read these two links first before you proceed further.
+check [Flow Playpal checkout](https://developer.paypal.com/docs/checkout/integrate/#2-set-up-a-payment)
+Signup for a paypal developer account using this link – https://developer.paypal.com/
+Now create an app (in sandbox mode). You’ll be given a key.
 
 
 ## Use in template
@@ -83,8 +89,8 @@ export class ProductComponent implements OnInit {
           transactions: [
             {
               amount: {
-                total: this.currentProduct.price,
-                currency: this.TYPE_CURRENCY[this.currentProduct.currency].value
+                total: 10,
+                currency: 'USD'
               }
             }
           ]
