@@ -41,8 +41,12 @@ export class PaypalAngularComponent implements OnInit {
   constructor(
     private paypalAngularService: PaypalAngularService
   ) {
-    const client = this.paypalAngularService.getConfig();
-    this.paypalConfig = {
+
+  }
+
+  ngOnInit() {
+     const client = this.paypalAngularService.getConfig();
+     this.paypalConfig = {
       locale: this.locale || this.default.locale,
       commit: this.commit || this.default.commit,
       env: this.env || this.default.env,
@@ -53,9 +57,8 @@ export class PaypalAngularComponent implements OnInit {
       payment: () => null,
       onAuthorize: () => null
     };
-  }
 
-  ngOnInit() {
+    
     if (this.payment) {
       this.paypalConfig.payment = this.payment;
     }
